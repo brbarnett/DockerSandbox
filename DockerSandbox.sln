@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27906.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortableDotNetCore", "PortableDotNetCore\PortableDotNetCore.csproj", "{68AFD4B0-251B-4816-8078-AAD640251B37}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetStandardLib", "DotNetStandardLib\DotNetStandardLib.csproj", "{ACB81898-16E0-4F9F-8277-C10019BF5912}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{68AFD4B0-251B-4816-8078-AAD640251B37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68AFD4B0-251B-4816-8078-AAD640251B37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68AFD4B0-251B-4816-8078-AAD640251B37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACB81898-16E0-4F9F-8277-C10019BF5912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB81898-16E0-4F9F-8277-C10019BF5912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB81898-16E0-4F9F-8277-C10019BF5912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB81898-16E0-4F9F-8277-C10019BF5912}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,18 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PortableDotNetCore.Models;
+
+using DotNetStandardLib;
 
 namespace PortableDotNetCore.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IHomePageHeaderService _homePageHeaderService;
+
+        public HomeController(IHomePageHeaderService homePageHeaderService)
+        {
+            if(homePageHeaderService == null) throw new ArgumentNullException(nameof(homePageHeaderService));
+            this._homePageHeaderService = homePageHeaderService;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            string homePageHeaderText = this._homePageHeaderService.GetHomePageHeaderText();
+            return View(new HomePageModel(homePageHeaderText));
+        }
+
+        public class HomePageModel
+        {
+            public string Header { get; set; }
+
+            public HomePageModel(string header)
+            {
+                if(String.IsNullOrEmpty(header)) throw new ArgumentNullException(nameof(header));
+                this.Header = header;
+            }
         }
 
         public IActionResult About()
